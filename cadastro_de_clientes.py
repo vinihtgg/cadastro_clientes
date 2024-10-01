@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import ttk
 
 root = Tk()
 
@@ -8,6 +9,7 @@ class Application:
         self.tela()
         self.frames_da_tela()
         self.widgets_frame1()
+        self.lista_frame2()
         root.mainloop()
         
     #CRIA A TELA DA APLICAÇÃO
@@ -43,31 +45,66 @@ class Application:
     #CRIA OS BOTÕES E CAMPO DE TEXTO
     def widgets_frame1(self):
         self.bt_limpar = Button(self.frame_1,
-                                text= "Limpar")
+                                text= "Limpar",
+                                bd= 2,
+                                bg="blue",
+                                fg= "white",
+                                font=("verdana",
+                                      8, 
+                                      "bold"),
+                                )
         self.bt_limpar.place(relx= 0.2,
                              rely=0.1,
                              relwidth= 0.1,
                              relheight= 0.15)
         self.bt_limpar = Button(self.frame_1,
-                                text= "Buscar")
+                                text= "Buscar",
+                                bd= 2,
+                                bg="blue",
+                                fg= "white",
+                                font=("verdana",
+                                      8, 
+                                      "bold"),
+                                )
         self.bt_limpar.place(relx= 0.3,
                              rely=0.1,
                              relwidth= 0.1,
                              relheight= 0.15)
         self.bt_limpar = Button(self.frame_1,
-                                text= "Novo")
+                                text= "Novo",
+                                bd= 2,
+                                bg="blue",
+                                fg= "white",
+                                font=("verdana",
+                                      8, 
+                                      "bold"),
+                                )
         self.bt_limpar.place(relx= 0.7,
                              rely=0.1,
                              relwidth= 0.1,
                              relheight= 0.15)
         self.bt_limpar = Button(self.frame_1,
-                                text= "Alterar")
+                                text= "Alterar",
+                                bd= 2,
+                                bg="blue",
+                                fg= "white",
+                                font=("verdana",
+                                      8, 
+                                      "bold"),
+                                )
         self.bt_limpar.place(relx= 0.8,
                              rely=0.1,
                              relwidth= 0.1,
                              relheight= 0.15)
         self.bt_limpar = Button(self.frame_1,
-                                text= "Apagar")
+                                text= "Apagar",
+                                bd= 2,
+                                bg="blue",
+                                fg= "white",
+                                font=("verdana",
+                                      8, 
+                                      "bold"),
+                                )
         self.bt_limpar.place(relx= 0.9,
                              rely=0.1,
                              relwidth= 0.1,
@@ -105,5 +142,29 @@ class Application:
         self.telefone_entry.place(relx=0.5,
                                 rely=0.7,
                                 relwidth=0.4)
-    
+
+        #FRAME 2 TREEVIEW
+        def lista_frame2(self):
+            self.listaCli = ttk.Treeview(self.frame_2,
+                                         height=3,
+                                         columns=("col1",
+                                                  "col2",
+                                                  "col3",
+                                                  "col4"))
+            self.listaCli.heading("a0", text="")
+            self.listaCli.heading("a1", text="CODIGO")
+            self.listaCli.heading("a2", text="NOME")
+            self.listaCli.heading("a3", text="TELEFONE")
+            self.listaCli.heading("a4", text="CIDADE")    
+            
+            self.listaCli.column("a0", width=1)
+            self.listaCli.column("a1", width=50)
+            self.listaCli.column("a2", width=150)
+            self.listaCli.column("a3", width=100)
+            self.listaCli.column("a4", width=100)
+            
+
+
+            
+            
 Application()
