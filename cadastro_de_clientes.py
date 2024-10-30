@@ -144,24 +144,24 @@ class Application:
                                 relwidth=0.4)
 
         #FRAME 2 TREEVIEW
-        def lista_frame2(self):
-            self.listaCli = ttk.Treeview(self.frame_2,
+    def lista_frame2(self):
+        self.listaCli = ttk.Treeview(self.frame_2,
                                          height=3,
                                          columns=("col1",
                                                   "col2",
                                                   "col3",
                                                   "col4"))
-            self.listaCli.heading("a0", text="")
-            self.listaCli.heading("a1", text="CODIGO")
-            self.listaCli.heading("a2", text="NOME")
-            self.listaCli.heading("a3", text="TELEFONE")
-            self.listaCli.heading("a4", text="CIDADE")    
+        self.listaCli.heading("#0", text="")
+        self.listaCli.heading("#1", text="CODIGO")
+        self.listaCli.heading("#2", text="NOME")
+        self.listaCli.heading("#3", text="TELEFONE")
+        self.listaCli.heading("#4", text="CIDADE")    
             
-            self.listaCli.column("a0", width=1)
-            self.listaCli.column("a1", width=50)
-            self.listaCli.column("a2", width=150)
-            self.listaCli.column("a3", width=100)
-            self.listaCli.column("a4", width=100)
+        self.listaCli.column("#0", width=1)
+        self.listaCli.column("#1", width=50)
+        self.listaCli.column("#2", width=150)
+        self.listaCli.column("#3", width=100)
+        self.listaCli.column("#4", width=100)
             
 
 
