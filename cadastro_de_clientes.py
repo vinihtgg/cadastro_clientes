@@ -162,6 +162,23 @@ class Application:
         self.listaCli.column("#2", width=150)
         self.listaCli.column("#3", width=100)
         self.listaCli.column("#4", width=100)
+             
+        self.listaCli.place(relx=0.01,
+                            rely=0.01,
+                            width= 0.95,
+                            height= 0.05)
+        self.scrollLista = Scrollbar(self.frame_2,
+                                     orient= 'vertical')
+        
+        self.listaCli.configure(yscrollcommand= 
+                                self.scrollLista.set)
+        
+        self.scrollLista.place(relx= 0.96,
+                               rely= 0.01,
+                               width= 0.04,
+                               height=0.85)
+        
+        
             
 
 
